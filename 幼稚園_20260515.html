@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>郡山けいあい幼稚園 6月行事予定表・お知らせ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Zen Maru Gothic"', '"Hiragino Maru Gothic ProN"', '"Meiryo"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              light: '#f0f9ff',
+              DEFAULT: '#0ea5e9',
+              dark: '#0369a1',
+            },
+            accent: {
+              pink: '#fce7f3',
+              green: '#dcfce7',
+              yellow: '#fef9c3'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+    
+    html {
+      font-size: 16px;
+    }
+    
+    body {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 1rem; /* ベースフォントサイズ */
+      color: #334155;
+      line-height: 1.6;
+      background-color: #f8fafc;
+      background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    /* 最小フォントサイズ保証クラス */
+    .text-min { font-size: 0.95rem; }
+    .text-base-custom { font-size: 1.05rem; }
+    
+    /* レスポンシブテーブル用スタイル */
+    @media (max-width: 768px) {
+      .responsive-table thead {
+        display: none;
+      }
+      .responsive-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        border: 2px solid #e2e8f0;
+        border-radius: 0.75rem;
+        background: white;
+        overflow: hidden;
+      }
+      .responsive-table tbody td {
+        display: block;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-bottom: 1px dashed #e2e8f0;
+      }
+      .responsive-table tbody td:last-child {
+        border-bottom: none;
+      }
+      .responsive-table tbody td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 700;
+        color: #64748b;
+        margin-bottom: 0.25rem;
+        font-size: 0.95rem;
+        background-color: #f1f5f9;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        width: fit-content;
+      }
+      .date-col {
+        background-color: #f8fafc;
+        border-bottom: 2px solid #e2e8f0 !important;
+      }
+    }
+
+    /* スクロールバーのカスタマイズ */
+    ::-webkit-scrollbar { height: 8px; width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+  </style>
+</head>
+<body class="p-3 md:p-6 lg:p-8">
+
+  <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+    
+    <!-- タイトルエリア（headerタグ不使用） -->
+    <div class="bg-brand-light p-6 md:p-10 border-b-4 border-brand relative">
+      <div class="absolute top-0 right-0 p-4 opacity-20">
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16.2A9.9 9.9 0 0 0 22 12c0-5.5-4.5-10-10-10S2 6.5 2 12a10 10 0 0 0 2 4.2"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/><path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg>
+      </div>
+      <div class="relative z-10 text-center space-y-4">
+        <div class="inline-block bg-white px-4 py-1 rounded-full text-brand-dark font-bold text-min border border-brand/20 shadow-sm mb-2">
+          R8.5.15 郡山けいあい
+        </div>
+        <h1 class="text-3xl md:text-5xl font-bold text-slate-800 tracking-wider flex items-center justify-center gap-3">
+          <span class="text-4xl md:text-6xl">🐸</span>
+          6月 行事予定表
+          <span class="text-4xl md:text-6xl">☔️</span>
+        </h1>
+        <p class="text-slate-600 font-medium text-base-custom mt-2">
+          行事予定および主な給食メニュー
+        </p>
+      </div>
+    </div>
+
+    <!-- コンテンツエリア -->
+    <div class="p-4 md:p-8 space-y-12">
+
+      <!-- 給食に関する重要なお知らせ -->
+      <div class="bg-orange-50 border-l-4 border-orange-400 p-5 rounded-r-lg shadow-sm">
+        <h3 class="font-bold text-orange-800 text-base-custom mb-3 flex items-center gap-2">
+          <span>🍽️</span> 給食に関するお知らせとお願い
+        </h3>
+        <ul class="list-disc list-inside space-y-2 text-slate-700 text-min">
+          <li><strong>※印</strong>の付いている日は、お箸とスプーンを持たせてください。</li>
+          <li>都合によりメニューが一部変わることがあります。</li>
+          <li>アレルギーのある方は、担任にお知らせ下さい。<br>
+              アレルギー材料表とアレルギーチェック表をお渡ししますので、チェック・記入後お子さんに持たせて下さい。</li>
+          <li class="mt-3 p-3 bg-white rounded border border-orange-200">
+            <strong class="text-orange-700">【もも組の保護者様へ】</strong><br>
+            もも組の給食は <strong>6/16(火)</strong> よりスタートします。給食日以外はお弁当日です。<br>
+            <span class="inline-block mt-1 text-sm bg-orange-100 px-2 py-1 rounded">給食日：16日、18日、23日、25日、30日</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 新メニュー告知 -->
+      <div class="bg-brand text-white p-4 rounded-xl shadow-md flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 font-bold text-lg">
+          <span class="bg-white text-brand px-3 py-1 rounded-full text-min">今月の注目</span>
+          <span>✨ 【新メニュー】が登場します！ ✨</span>
+        </div>
+        <div class="flex flex-wrap gap-2 text-min font-medium">
+          <span class="bg-brand-dark px-3 py-1.5 rounded-lg border border-white/20">🍜 ジャージャー麺</span>
+          <span class="bg-brand-dark px-3 py-1.5 rounded-lg border border-white/20">🍱 ソースカツ丼</span>
+          <span class="bg-brand-dark px-3 py-1.5 rounded-lg border border-white/20">🐟 鮭のからあげ ねぎおろしだれ</span>
+        </div>
+      </div>
+
+      <!-- カレンダー表 -->
+      <div class="overflow-hidden rounded-xl border border-slate-300 shadow-sm">
+        <table class="w-full text-left border-collapse responsive-table">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 border-b-2 border-slate-300">
+              <th class="p-4 font-bold w-24 text-center text-base-custom">日 / 曜</th>
+              <th class="p-4 font-bold w-2/5 text-base-custom">行事予定</th>
+              <th class="p-4 font-bold w-auto text-base-custom">主な給食メニュー</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-700 text-min divide-y divide-slate-200">
+            <!-- 1日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">1</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(月)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                プラネタリウム (ぺんぎん)<br>
+                親子登園(もも)
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                炒飯、中華サラダ、ニラ玉スープ、牛乳
+              </td>
+            </tr>
+            <!-- 2日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">2</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(火)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                体育あそび自由参観(年中)
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                タンドリーチキン、ツナサラダ (マヨ)<br>野菜スープ、ミニゼリー
+              </td>
+            </tr>
+            <!-- 3日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">3</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(水)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                13時降園<br>
+                避難訓練(火災)<br>
+                課外◎☆
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                ビビンバ丼、蒸ししゅうまい<br>クリームコーンと卵のスープ
+              </td>
+            </tr>
+            <!-- 4日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">4</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(木)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                E〜たいむ<br>
+                <span class="inline-block bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-xs mt-1 font-bold">虫歯予防デー</span>
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                白身魚フライ トマトソース、キャロットスープ<br>ボイル野菜(青じそドレッシング)
+              </td>
+            </tr>
+            <!-- 5日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">5</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(金)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                プラネタリウム (かもめ)
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                ハンバーグ、じゃこサラダ<br>コンソメスープ<br>
+                <span class="text-orange-600 font-bold">年長組お弁当</span>
+              </td>
+            </tr>
+            <!-- 6日 -->
+            <tr class="bg-blue-50/50 hover:bg-blue-50 transition-colors">
+              <td class="p-4 text-center font-bold text-blue-600 date-col" data-label="日 / 曜">
+                <span class="text-lg">6</span><span class="text-sm">日</span><br>
+                <span>(土)</span>
+              </td>
+              <td class="p-4 text-blue-800" data-label="行事予定">
+                家庭の日<br>
+                (休園・園庭開放10時〜15時)
+              </td>
+              <td class="p-4 text-slate-400 text-center" data-label="主な給食メニュー">
+                -
+              </td>
+            </tr>
+            <!-- 7日 -->
+            <tr class="bg-red-50/50 hover:bg-red-50 transition-colors">
+              <td class="p-4 text-center font-bold text-red-500 date-col" data-label="日 / 曜">
+                <span class="text-lg">7</span><span class="text-sm">日</span><br>
+                <span>(日)</span>
+              </td>
+              <td class="p-4" data-label="行事予定"></td>
+              <td class="p-4 text-slate-400 text-center" data-label="主な給食メニュー">
+                -
+              </td>
+            </tr>
+            <!-- 8日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">8</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(月)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                内科健診(年長・年少)<br>
+                課外◇◆〔年少スタート〕
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                さわらのごまがらめ、きゅうりとちくわの酢の物<br>豚汁
+              </td>
+            </tr>
+            <!-- 9日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">9</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(火)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                体育あそび自由参観(年少)
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                ポークチャップ、コーンサラダ (マヨ)<br>オニオンスープ、牛乳
+              </td>
+            </tr>
+            <!-- 10日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">10</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(水)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                13時降園<br>
+                内科健診(年中)<br>
+                課外◎ 〔年少スタート]
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                ビーフシチュー、フレンチカニカマサラダ<br>ロールパン、アメリカンドッグ
+              </td>
+            </tr>
+            <!-- 11日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">11</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(木)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                E〜たいむ<br>
+                保育料引落日
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                中華丼、春巻、わかめスープ、黄桃
+              </td>
+            </tr>
+            <!-- 12日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">12</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(金)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                プラネタリウム(はと)
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                牛しぐれ煮、磯和え、じゃがいもと玉ねぎのみそ汁
+              </td>
+            </tr>
+            <!-- 13日 -->
+            <tr class="bg-blue-50/50 hover:bg-blue-50 transition-colors">
+              <td class="p-4 text-center font-bold text-blue-600 date-col" data-label="日 / 曜">
+                <span class="text-lg">13</span><span class="text-sm">日</span><br>
+                <span>(土)</span>
+              </td>
+              <td class="p-4 text-blue-800" data-label="行事予定">
+                家庭の日保育参観(年長・年中)
+              </td>
+              <td class="p-4 text-slate-400 text-center" data-label="主な給食メニュー">
+                -
+              </td>
+            </tr>
+             <!-- 14日 -->
+             <tr class="bg-red-50/50 hover:bg-red-50 transition-colors">
+              <td class="p-4 text-center font-bold text-red-500 date-col" data-label="日 / 曜">
+                <span class="text-lg">14</span><span class="text-sm">日</span><br>
+                <span>(日)</span>
+              </td>
+              <td class="p-4" data-label="行事予定"></td>
+              <td class="p-4 text-slate-400 text-center" data-label="主な給食メニュー">
+                -
+              </td>
+            </tr>
+            <!-- 15日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">15</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(月)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                <span class="inline-block bg-green-100 text-green-800 px-2 py-0.5 rounded font-bold mb-1">体操服登園スタート</span>(全園児)<br>
+                課外☆◇
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                筑前煮、菜飯、キャベツとちくわの和え物<br>豆腐とねぎのみそ汁、ミニゼリー
+              </td>
+            </tr>
+            <!-- 16日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">16</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(火)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                子育て相談室
+              </td>
+              <td class="p-4 relative" data-label="主な給食メニュー">
+                <span class="inline-block bg-brand text-white text-xs px-2 py-0.5 rounded-full mb-1">新メニュー</span><br>
+                ジャージャー麺、もやしとわかめの中華和え<br>中華スープ、牛乳
+              </td>
+            </tr>
+            <!-- 17日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">17</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(水)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                11:30 降園<br>
+                【職業体験(西中)】
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                鯖のソース煮、ほうれん草のごま和え<br>ワンタンスープ
+              </td>
+            </tr>
+            <!-- 18日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">18</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(木)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                E〜たいむ<br>
+                【職業体験(西中)】
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                ヤンニョムチキン、ナムル<br>わかめと玉ねぎのスープ<br>
+                <span class="text-orange-600 font-bold">年中組お弁当</span>
+              </td>
+            </tr>
+            <!-- 19日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">19</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(金)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                じゃがいも掘り(年中)<br>
+                【職業体験(西中)】
+              </td>
+              <td class="p-4 text-slate-400" data-label="主な給食メニュー">
+                -
+              </td>
+            </tr>
+            <!-- 20日 -->
+            <tr class="bg-blue-50/50 hover:bg-blue-50 transition-colors">
+              <td class="p-4 text-center font-bold text-blue-600 date-col" data-label="日 / 曜">
+                <span class="text-lg">20</span><span class="text-sm">日</span><br>
+                <span>(土)</span>
+              </td>
+              <td class="p-4 text-blue-800" data-label="行事予定">
+                家庭の日<br>
+                (休園・園庭開放なし)
+              </td>
+              <td class="p-4 text-slate-400 text-center" data-label="主な給食メニュー">
+                -
+              </td>
+            </tr>
+            <!-- 21日 -->
+            <tr class="bg-red-50/50 hover:bg-red-50 transition-colors">
+              <td class="p-4 text-center font-bold text-red-500 date-col" data-label="日 / 曜">
+                <span class="text-lg">21</span><span class="text-sm">日</span><br>
+                <span>(日)</span>
+              </td>
+              <td class="p-4 text-red-700 font-bold" data-label="行事予定">
+                👔 父の日
+              </td>
+              <td class="p-4 text-slate-400 text-center" data-label="主な給食メニュー">
+                -
+              </td>
+            </tr>
+            <!-- 22日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">22</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(月)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                誕生会(年少)<br>
+                保育料引落日(再)<br>
+                課外◇◆
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                タコライス、ブロッコリーサラダ (マヨ)<br>コンソメスープ、バナナ
+              </td>
+            </tr>
+            <!-- 23日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">23</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(火)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                誕生会(年長・年中)
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                鯛のつけ焼き、野菜のおかか和え<br>サムゲタン風スープ、ゼリー (ぶどう)
+              </td>
+            </tr>
+            <!-- 24日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">24</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(水)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                13時降園<br>
+                課外◎
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                かしわ酢飯、ひじき煮<br>玉ねぎと揚げのみそ汁<br>
+                <span class="text-orange-600 font-bold">年少組お弁当</span>
+              </td>
+            </tr>
+            <!-- 25日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">25</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(木)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                E〜たいむ<br>
+                <span class="inline-block bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-bold mt-1">プール開き 🌊</span>
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                肉団子の酢豚風、キャベツのゆかり和え<br>チンゲン菜スープ
+              </td>
+            </tr>
+            <!-- 26日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">26</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(金)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                ご当地ランチの日(福井)
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                <span class="inline-block bg-brand text-white text-xs px-2 py-0.5 rounded-full mb-1">新メニュー</span><br>
+                ソースカツ丼、厚揚げと小松菜の煮物<br>打ち豆汁、ゼリー(りんご)
+              </td>
+            </tr>
+            <!-- 27日 -->
+            <tr class="bg-blue-50/50 hover:bg-blue-50 transition-colors">
+              <td class="p-4 text-center font-bold text-blue-600 date-col" data-label="日 / 曜">
+                <span class="text-lg">27</span><span class="text-sm">日</span><br>
+                <span>(土)</span>
+              </td>
+              <td class="p-4 text-blue-800" data-label="行事予定">
+                家庭の日<br>
+                (休園・園庭開放なし)
+              </td>
+              <td class="p-4 text-slate-400 text-center" data-label="主な給食メニュー">
+                -
+              </td>
+            </tr>
+             <!-- 28日 -->
+             <tr class="bg-red-50/50 hover:bg-red-50 transition-colors">
+              <td class="p-4 text-center font-bold text-red-500 date-col" data-label="日 / 曜">
+                <span class="text-lg">28</span><span class="text-sm">日</span><br>
+                <span>(日)</span>
+              </td>
+              <td class="p-4" data-label="行事予定"></td>
+              <td class="p-4 text-slate-400 text-center" data-label="主な給食メニュー">
+                -
+              </td>
+            </tr>
+            <!-- 29日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">29</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(月)</span>
+              </td>
+              <td class="p-4" data-label="行事予定">
+                課外◇
+              </td>
+              <td class="p-4" data-label="主な給食メニュー">
+                鶏の梅照り焼き、ボイル野菜(オニオンドレッシング)<br>けんちん汁
+              </td>
+            </tr>
+            <!-- 30日 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="p-4 text-center font-bold date-col" data-label="日 / 曜">
+                <span class="text-lg">30</span><span class="text-sm">日</span><br>
+                <span class="text-slate-500">(火)</span>
+              </td>
+              <td class="p-4" data-label="行事予定"></td>
+              <td class="p-4" data-label="主な給食メニュー">
+                <span class="inline-block bg-brand text-white text-xs px-2 py-0.5 rounded-full mb-1">新メニュー</span><br>
+                鮭のからあげ ねぎおろしだれ<br>ジャーマンポテト、キャベツと揚げのみそ汁
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-right text-sm text-slate-500 mt-2">* 各行事の詳細は、後日メール若しくは別紙のお手紙にてお知らせします。</p>
+
+
+      <!-- ==========================================
+           園からのお知らせ セクション
+      ========================================== -->
+      <div class="mt-16 border-t-2 border-slate-200 pt-12">
+        
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-6 md:p-8 mb-8 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-2 h-full bg-brand"></div>
+          <p class="text-base-custom leading-loose text-slate-700">
+            年中・年長組は、友だちや先生と一緒に身体を沢山動かすあそびに積極的に取り組んでいます。<br>
+            年少組も好きなあそびに興味を持つようになり、落ち着いて過ごす時間が長くなってきました。<br>
+            活動中に、明るい笑い声や歌声が響いています。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          
+          <!-- プラネタリウム -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+            <h3 class="bg-indigo-50 text-indigo-900 font-bold p-4 border-b border-indigo-100 flex items-center gap-2 text-base-custom">
+              <span>🌌</span> プラネタリウムへ行ってきます (年長組)
+            </h3>
+            <div class="p-5 flex-grow space-y-4 text-min text-slate-700">
+              <p>下記の日程で<strong>おにクルきたしんプラネタリウム</strong>へ出掛けます。<br>七夕投影の観覧と星座について学んだり、皆が住んでいる北摂の空について教えて頂きます。帰宅後のお話をどうぞ楽しみにしていて下さい。</p>
+              <table class="w-full text-center border-collapse border border-slate-200">
+                <thead>
+                  <tr class="bg-slate-50">
+                    <th class="border border-slate-200 p-2 font-bold">日にち</th>
+                    <th class="border border-slate-200 p-2 font-bold">クラス</th>
+                    <th class="border border-slate-200 p-2 font-bold">幼稚園出発時間</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-slate-200 p-2">6月1日(月)</td>
+                    <td class="border border-slate-200 p-2">ぺんぎんぐみ</td>
+                    <td class="border border-slate-200 p-2">9:45</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-200 p-2">6月5日(金)</td>
+                    <td class="border border-slate-200 p-2">かもめぐみ</td>
+                    <td class="border border-slate-200 p-2">10:40</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-200 p-2">6月12日(金)</td>
+                    <td class="border border-slate-200 p-2">はとぐみ</td>
+                    <td class="border border-slate-200 p-2">9:45</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 体育あそび自由参観 -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+            <h3 class="bg-emerald-50 text-emerald-900 font-bold p-4 border-b border-emerald-100 flex items-center gap-2 text-base-custom">
+              <span>🏃‍♂️</span> 体育あそび自由参観について (年少・年中組)
+            </h3>
+            <div class="p-5 flex-grow space-y-4 text-min text-slate-700">
+              <p>ご希望の方は、ご来園いただき 園庭でご覧ください。<br>
+              <span class="text-red-600 font-bold">雨天の場合は延期せず、2階講堂で活動を行います。</span></p>
+              
+              <table class="w-full text-center border-collapse border border-slate-200 text-sm md:text-min">
+                <thead>
+                  <tr class="bg-slate-50">
+                    <th class="border border-slate-200 p-2">日にち</th>
+                    <th class="border border-slate-200 p-2 font-bold">10:00〜</th>
+                    <th class="border border-slate-200 p-2 font-bold">10:30〜</th>
+                    <th class="border border-slate-200 p-2 font-bold">11:00〜</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-slate-200 p-2 font-bold">2日 (火)</td>
+                    <td class="border border-slate-200 p-2 text-sky-700">そう</td>
+                    <td class="border border-slate-200 p-2 text-sky-700">いぬ</td>
+                    <td class="border border-slate-200 p-2 text-sky-700">うさぎ</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-200 p-2 font-bold">9日 (木)</td>
+                    <td class="border border-slate-200 p-2 text-pink-600">たんぽぽ</td>
+                    <td class="border border-slate-200 p-2 text-pink-600">すみれ</td>
+                    <td class="border border-slate-200 p-2 text-pink-600">ゆり</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="list-disc list-outside ml-5 space-y-1 text-[0.9rem] text-slate-600">
+                <li>保護者の方の人数制限はございません。</li>
+                <li>参観に来られない方は、事前に子どもさんと話し合いをして安心させてあげてください。</li>
+                <li>クラス活動時間まで園内には入れませんのでご了承ください。</li>
+                <li class="font-bold text-red-600">子ども達はこの時期 保護者の方を目にすると、一緒に帰りたがったり泣き出したりする姿がありますので、参観終了後は園内にとどまらず、速やかに移動していただきますようお願い致します。(次のクラスの活動がすぐに始まります)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 家庭の日保育参観 -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:col-span-2 lg:col-span-1">
+            <h3 class="bg-rose-50 text-rose-900 font-bold p-4 border-b border-rose-100 flex items-center gap-2 text-base-custom">
+              <span>👨‍👩‍👧</span> 家庭の日保育参観について
+            </h3>
+            <div class="p-5 flex-grow space-y-4 text-min text-slate-700">
+              <p><strong>13日(土)</strong>は、年中組・年長組の家庭の日保育参観です。<br>
+              今回は6月の「父の日」にちなみ、できるだけお父さんに参加して頂き、園児と共に楽しいひと時をお過ごしください。ご都合の悪い時は、お母さんや祖父母等どなたかご家族の方が参加して下さい。</p>
+              
+              <table class="w-full text-center border-collapse border border-slate-200 mt-2 text-sm md:text-min">
+                <thead>
+                  <tr class="bg-slate-50">
+                    <th class="border border-slate-200 p-2 font-bold">開始時間</th>
+                    <th class="border border-slate-200 p-2 font-bold" colspan="3">クラス / 終了時間</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-slate-200 p-2 font-bold whitespace-nowrap">8:45〜</td>
+                    <td class="border border-slate-200 p-2">いぬ<br><span class="text-xs text-slate-500">〜9:45</span></td>
+                    <td class="border border-slate-200 p-2">かもめ<br><span class="text-xs text-slate-500">〜10:00</span></td>
+                    <td class="border border-slate-200 p-2">ぺんぎん<br><span class="text-xs text-slate-500">〜10:00</span></td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-200 p-2 font-bold whitespace-nowrap">10:45〜</td>
+                    <td class="border border-slate-200 p-2">そう<br><span class="text-xs text-slate-500">〜11:45</span></td>
+                    <td class="border border-slate-200 p-2">うさぎ<br><span class="text-xs text-slate-500">〜11:45</span></td>
+                    <td class="border border-slate-200 p-2">はと<br><span class="text-xs text-slate-500">〜12:00</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="text-sm text-slate-500 text-right">※詳しくは、後日お知らせいたします。</p>
+            </div>
+          </div>
+
+          <!-- その他の連絡事項リスト -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:col-span-2 lg:col-span-1">
+             <h3 class="bg-slate-100 text-slate-800 font-bold p-4 border-b border-slate-200 flex items-center gap-2 text-base-custom">
+              <span>📌</span> その他の重要なお知らせ
+            </h3>
+            <div class="p-5 flex-grow space-y-5 text-min text-slate-700">
+              
+              <!-- 各項目 -->
+              <div class="border-l-4 border-sky-400 pl-3">
+                <h4 class="font-bold text-slate-800 mb-1">◎ 夏服について</h4>
+                <p>ブラウスは 気候に応じて半袖を着用させてください。今後半袖体操シャツも汗ばんで着脱しにくくなりますので、ランニングを持たせていただく等、その日の気温に応じて対応してください。</p>
+              </div>
+
+              <div class="border-l-4 border-sky-400 pl-3">
+                <h4 class="font-bold text-slate-800 mb-1">◎ 体操服登園について</h4>
+                <p><strong>15日(月)から運動会終了まで、全園児 体操服登園になります。</strong><br>汗ばみ着替えもしにくくなり負担となる為です。クラス名札は今後つけないでください。体操服やランニングのゼッケンに、<span class="text-red-600 font-bold border-b border-red-600">クラス・名前を必ず記入</span>してください。</p>
+              </div>
+
+              <div class="border-l-4 border-sky-400 pl-3">
+                <h4 class="font-bold text-slate-800 mb-1">◎ 避難訓練について (3日 水曜日)</h4>
+                <p>「火災」を想定した訓練です。ハンカチの使い方も指導します。<strong>毎日ハンカチは忘れずに</strong>持たせてください。</p>
+              </div>
+
+              <div class="border-l-4 border-sky-400 pl-3">
+                <h4 class="font-bold text-slate-800 mb-1">◎ ミニ運動会について</h4>
+                <p>保育の中でミニ運動会を行います。適時水分補給を行いながら楽しく参加できるようにします。この時期は<strong>水筒にたっぷりとお茶を入れて</strong>登園させてください。※保護者の方の参観はありません。</p>
+              </div>
+              
+            </div>
+          </div>
+
+        </div> <!-- grid 終了 -->
+
+        <!-- 短いお知らせを並べるエリア -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 text-min">
+          <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm relative overflow-hidden">
+             <div class="absolute top-0 right-0 w-8 h-8 bg-blue-100 rounded-bl-full z-0"></div>
+             <h4 class="font-bold text-slate-800 mb-2 relative z-10">◎ 水遊びが始まります</h4>
+             <p class="text-slate-600 relative z-10"><strong>25日(木)</strong>より開始。<br>毎日、全園児 水遊びの準備を持参して頂きます。(プールバッグ不要、自分で着脱できる水着をご準備ください)</p>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm relative overflow-hidden">
+             <div class="absolute top-0 right-0 w-8 h-8 bg-amber-100 rounded-bl-full z-0"></div>
+             <h4 class="font-bold text-slate-800 mb-2 relative z-10">◎ じゃがいも掘り(年中)</h4>
+             <p class="text-slate-600 relative z-10"><strong>19日(金) 【千提寺】</strong><br>子ども用軍手の準備をお願いします。<span class="text-red-600">軍手は6/15(月)に名前を書いて持たせて下さい。</span></p>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm relative overflow-hidden">
+             <div class="absolute top-0 right-0 w-8 h-8 bg-pink-100 rounded-bl-full z-0"></div>
+             <h4 class="font-bold text-slate-800 mb-2 relative z-10">◎ 虫歯予防デー</h4>
+             <p class="text-slate-600 relative z-10"><strong>4日</strong>は虫歯予防デーです。<br>歌や絵本等で歯を大切にする意識づけを行っていきます。</p>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-8 h-8 bg-green-100 rounded-bl-full z-0"></div>
+            <h4 class="font-bold text-slate-800 mb-2 relative z-10">◎ 内科検診について</h4>
+            <p class="text-slate-600 relative z-10">園医さんに来ていただき検診をいたします。検診の進み具合により対象学年が変更になる可能性がございます。</p>
+         </div>
+        </div>
+
+        <!-- 7月の予定 -->
+        <div class="mt-8 bg-slate-800 text-white rounded-xl p-6 shadow-md border border-slate-700 flex flex-col md:flex-row items-center gap-6 justify-between">
+          <div class="flex items-center gap-3 w-full md:w-auto">
+            <span class="text-4xl">🌻</span>
+            <h3 class="text-xl font-bold tracking-wider">7月の予定</h3>
+          </div>
+          <div class="text-slate-200 text-min w-full md:w-auto">
+            <p class="font-bold text-white text-base-custom mb-1">7月3日(金) 保育参観 (年少組)</p>
+            <p>※講演会なし。午前中の予定です。<br>参観後お子さんと一緒に帰って頂きますが、お仕事に戻られる方はその後の預かりも可能ですので担任までお知らせください。</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div> <!-- コンテンツエリア終了 -->
+  </div> <!-- 全体ラッパー終了 -->
+
+</body>
+</html>
